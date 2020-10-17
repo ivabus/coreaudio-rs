@@ -1,3 +1,7 @@
+[workspace]
+members = [
+    "examples/ios/",
+]
 [package]
 name = "coreaudio-rs"
 version = "0.9.1"

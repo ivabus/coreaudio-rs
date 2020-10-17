@@ -5,10 +5,10 @@ extern crate coreaudio;
 use std::collections::VecDeque;
 use std::sync::{Arc, Mutex};
 
-use coreaudio::audio_unit::{AudioUnit, Element, SampleFormat, Scope, StreamFormat};
-use coreaudio::audio_unit::audio_format::LinearPcmFlags;
-use coreaudio::audio_unit::render_callback::{self, data};
-use coreaudio::sys::*;
+use feedback::coreaudio::audio_unit::{AudioUnit, Element, SampleFormat, Scope, StreamFormat};
+use feedback::coreaudio::audio_unit::audio_format::LinearPcmFlags;
+use feedback::coreaudio::audio_unit::render_callback::{self, data};
+use feedback::coreaudio::sys::*;
 
 const SAMPLE_RATE: f64 = 44100.0;
 

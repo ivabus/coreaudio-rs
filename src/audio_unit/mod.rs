@@ -421,7 +421,7 @@ pub fn get_property<T>(
 /// ----------
 ///
 /// - **id**: The identifier of the property.
-#[cfg(any(target_os = "ios", target_os = "visionos"))]
+#[cfg(any(target_os = "ios", target_os = "visionos", target_os = "tvos"))]
 pub fn audio_session_get_property<T>(id: u32) -> Result<T, Error> {
     let mut size = ::std::mem::size_of::<T>() as u32;
     unsafe {

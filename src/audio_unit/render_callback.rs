@@ -562,7 +562,7 @@ impl AudioUnit {
 
         // TODO: watchOS and tvOS. It's unclear how to get the frame buffer size on watchOS or
         // tvOS.
-        #[cfg(any(target_os = "ios", target_os = "visionos"))]
+        #[cfg(any(target_os = "ios", target_os = "visionos", target_os = "tvos"))]
         let mut buffer_frame_size: u32 = {
             let id = sys::kAudioSessionProperty_CurrentHardwareIOBufferDuration;
             let seconds: f32 = super::audio_session_get_property(id)?;
